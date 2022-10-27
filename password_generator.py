@@ -1,5 +1,4 @@
 import random
-from secrets import choice
 DIGITS = '0123456789'
 LOWERCASE_LETTERS = 'abcdefghijklmnopqrstuvwxyz'
 UPPERCASE_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -86,5 +85,6 @@ def generate_password(length, chars):
     else:
         print('Нет символов для генерации вашего пароля!')
 
+# генерация необходимого кол-ва паролей
 for _ in range(int(count)):
     generate_password(length, chars)
