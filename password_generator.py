@@ -17,6 +17,7 @@ low = input(f'Включать буквы в нижнем регистре? {cla
 pun = input(f'Включать пунктуацию? {clarification}')
 exceptions = input(f'Исключать неоднозначные символы(il1Lo0O)? {clarification}')
 
+#формируем строку допустимых символов
 if num == 'д':
     chars += DIGITS
 if upp == 'д':
@@ -34,6 +35,7 @@ if exceptions == 'д':
     chars = chars.replace('0', '')
     chars = chars.replace('O', '')
 
+#функция создания пароля
 def generate_password(length, chars):
     if len(chars) >= length:
         print(''.join(random.sample(chars, length)))
